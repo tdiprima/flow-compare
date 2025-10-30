@@ -1,5 +1,10 @@
+"""
+Airflow DAG with two sequential Python tasks.
+
+Creates aircub_dag with task_a >> task_b dependency chain, manual trigger only.
+Place in Airflow dags/ folder and trigger via Airflow UI or: airflow dags trigger aircub_dag
+"""
 # 🪶 Airflow-lite (aka basic Airflow DAG)
-# Run it: put it in your dags/ folder and trigger it via Airflow UI or CLI.
 from datetime import datetime
 
 from airflow import DAG
