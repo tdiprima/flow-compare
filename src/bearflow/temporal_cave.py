@@ -43,7 +43,15 @@ async def main():
     worker = Worker(
         client, task_queue="myflow", workflows=[MyFlow], activities=[task_a, task_b]
     )
-    await worker.run()
+
+    # Run worker with proper signal handling
+    print("Worker started. Press Ctrl-C to shutdown gracefully.")
+    try:
+        await worker.run()
+    except KeyboardInterrupt:
+        print("\nShutdown signal received, stopping worker gracefully...")
+    finally:
+        print("Worker stopped.")
 
 
 # Requires a running Temporal server (`temporal server start-dev`)
@@ -51,4 +59,7 @@ if __name__ == "__main__":
     import asyncio
 
     print("Starting Temporal worker...")
-    asyncio.run(main())
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        print("\nExiting...")
