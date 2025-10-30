@@ -66,11 +66,15 @@ airflow dags trigger aircub_dag
 ### Temporal
 
 ```bash
-# Start Temporal server
+# Terminal 1: Start Temporal server
 temporal server start-dev
 
-# Run the worker
+# Terminal 2: Run the worker
 python temporal_cave.py
+# You should see: Starting Temporal worker...
+
+# Terminal 3: Trigger the workflow
+python temporal_trigger.py
 ```
 
 ## 🧠 Quick Comparison

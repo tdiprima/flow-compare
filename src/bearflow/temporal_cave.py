@@ -1,5 +1,6 @@
 # ⏳ Temporal
 from datetime import timedelta
+
 from temporalio import activity, workflow
 from temporalio.client import Client
 from temporalio.worker import Worker
@@ -19,9 +20,15 @@ async def task_b():
 class MyFlow:
     @workflow.run
     async def run(self):
-        await workflow.execute_activity(task_a, schedule_to_close_timeout=timedelta(seconds=10))
-        await workflow.execute_activity(task_b, schedule_to_close_timeout=timedelta(seconds=10))
+        await workflow.execute_activity(
+            task_a, schedule_to_close_timeout=timedelta(seconds=10)
+        )
+        await workflow.execute_activity(
+            task_b, schedule_to_close_timeout=timedelta(seconds=10)
+        )
         print("Temporal flow complete!")
+        # No return statement = returns None
+        return "Workflow executed successfully!"
 
 
 async def main():
@@ -33,3 +40,8 @@ async def main():
 
 
 # Requires a running Temporal server (`temporal server start-dev`)
+if __name__ == "__main__":
+    import asyncio
+
+    print("Starting Temporal worker...")
+    asyncio.run(main())
