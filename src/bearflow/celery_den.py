@@ -5,6 +5,7 @@ Defines two asynchronous tasks (task_a, task_b) that can be executed by Celery w
 Start worker: celery -A celery_den worker --loglevel=info
 Execute tasks: task_a.delay(); task_b.delay()
 """
+
 # ⚙️  Celery
 from celery import Celery
 

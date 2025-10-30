@@ -1,9 +1,8 @@
 # Temporal workflow trigger
 import asyncio
 
-from temporalio.client import Client
-
 from temporal_cave import MyFlow
+from temporalio.client import Client
 
 
 async def trigger_workflow():

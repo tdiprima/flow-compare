@@ -4,6 +4,7 @@ Prefect workflow implementation with two sequential tasks.
 Executes task_a and task_b using Prefect's @task and @flow decorators.
 Run directly with: python myflow_prefect.py
 """
+
 # 🌀 Prefect
 from prefect import flow, task
 
