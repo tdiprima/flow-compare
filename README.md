@@ -16,7 +16,7 @@ Task A → Task B → "Flow complete!"
 |------------|-----------|------|-------|
 | 🌀 **Prefect** | `myflow_prefect.py` | smooth, modern | Pythonic, easy orchestration |
 | ⚙️ **Celery** | `celery_den.py` | old reliable | Great for async queues, needs broker |
-| 🧩 **Dagster** | `pipeline_paws.py` | data-pipeline friendly | strong typing + observability |
+| 🧩 **Dagster** | `dagster_den.py` | data-pipeline friendly | strong typing + observability |
 | ⏳ **Temporal** | `temporal_cave.py` | next-gen vibes | durable, resilient workflows |
 
 ## 🧰 Setup
@@ -26,6 +26,8 @@ If you're using [`uv`](https://github.com/astral-sh/uv) (and you should), grab t
 ### Install them all
 
 ```bash
+uv sync
+# or
 uv add prefect celery dagster temporalio redis
 ```
 
@@ -36,7 +38,7 @@ Each script can be run locally:
 ### Prefect
 
 ```bash
-python myflow_prefect.py
+uv run myflow_prefect.py
 ```
 
 ### Celery
@@ -57,7 +59,7 @@ python -c "from celery_den import task_a, task_b; task_a.delay(); task_b.delay()
 ### Dagster
 
 ```bash
-python pipeline_paws.py
+uv run dagster_den.py
 ```
 
 ### Temporal
@@ -67,11 +69,11 @@ python pipeline_paws.py
 temporal server start-dev
 
 # Terminal 2: Run the worker
-python temporal_cave.py
+uv run temporal_cave.py
 # You should see: Starting Temporal worker...
 
 # Terminal 3: Trigger the workflow
-python temporal_trigger.py
+uv run temporal_trigger.py
 ```
 
 ## 🧠 Quick Comparison
