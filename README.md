@@ -82,11 +82,6 @@ uv run temporal_trigger.py
 
 ## 🐻 Closing Thoughts
 
-"Workflows are just glorified to-do lists for machines."  
-— My, probably
-
-**License:** MIT  
-**Maintainer:** 🧸 My  
-**Mood:** ✨ mildly chaotic but organized
+Prefect seems to be perfect.
 
 <br>
