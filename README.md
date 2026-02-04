@@ -78,7 +78,6 @@ uv run temporal_trigger.py
 * Add async workflows for Celery & Prefect
 * Compare logging/monitoring tools (Prefect Cloud vs Dagit vs Temporal UI)
 * Dockerize everything for local orchestration lab
-* Write a wrapper script (`run_all_mys.py`) to test all flows together
 
 ## 🐻 Closing Thoughts
 
