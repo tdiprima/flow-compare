@@ -2,7 +2,7 @@
 
 This repo is for exploring different **workflow management systems**.
 
-It's not production. It's a **proof-of-concept**.
+It's not production. It's **proof-of-concept**.
 
 ## 🗺️ What's Inside
 
