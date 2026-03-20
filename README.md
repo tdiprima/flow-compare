@@ -1,8 +1,8 @@
-# 🐻 Myflow: Workflow Orchestration Playground
+# 🐻 Myflow: Workflow Orchestration
 
-This repo is a mini playground for exploring different **workflow management systems**.
+This repo is for exploring different **workflow management systems**.
 
-It's not production. It's **proof-of-concept territory**.
+It's not production. It's a **proof-of-concept**.
 
 ## 🗺️ What's Inside
 
