@@ -1,5 +1,5 @@
 #!/bin/bash
-# redisctl.sh 🧸
+# redisctl.sh
 # Simple Redis control script for macOS
 
 ACTION=$1
