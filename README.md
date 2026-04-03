@@ -1,4 +1,4 @@
-# Myflow: Workflow Orchestration
+# Workflow Orchestration
 
 Side-by-side implementations of the same two-task sequential workflow across four Python orchestration frameworks.
 
@@ -55,7 +55,7 @@ uv sync
 No external services required.
 
 ```bash
-python src/myflow/myflow_prefect.py
+python myflow_prefect.py
 ```
 
 ### Celery
@@ -73,7 +73,7 @@ Start the worker, then trigger tasks in a second terminal:
 celery -A celery_den worker --loglevel=info
 
 # Terminal 2
-python src/myflow/celery_trigger.py
+python celery_trigger.py
 ```
 
 ### Dagster
@@ -82,7 +82,7 @@ Run directly or open the Dagster UI:
 
 ```bash
 # In-process
-python src/myflow/dagster_den.py
+python dagster_den.py
 
 # UI
 dagster dev
@@ -97,10 +97,10 @@ Requires a running Temporal server:
 temporal server start-dev
 
 # Terminal 2 — start the worker
-python src/myflow/temporal_cave.py
+python temporal_cave.py
 
 # Terminal 3 — trigger the workflow
-python src/myflow/temporal_trigger.py
+python temporal_trigger.py
 ```
 
 ## Requirements
